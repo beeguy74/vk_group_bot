@@ -8,10 +8,10 @@ class Message:
 		self.date = date
 
 class MessageSchema(Schema):
-	id: fields.Integer()
-	from_id: fields.Integer()
-	text: fields.String()
-	date: fields.Integer()
+	id = fields.Integer()
+	from_id = fields.Integer()
+	text = fields.String()
+	date = fields.Integer()
 
 	@post_load
 	def make_message(self, data, **kwargs):
