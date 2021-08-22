@@ -1,11 +1,12 @@
 from marshmallow import Schema, fields, post_load
+from dataclasses import dataclass
 
+@dataclass
 class Message:
-	def __init__(self, id, from_id, text, date):
-		self.id = id
-		self.from_id = from_id
-		self.text = text
-		self.date = date
+	id: int
+	from_id: int
+	text: str
+	date: int
 
 class MessageSchema(Schema):
 	id = fields.Integer()
